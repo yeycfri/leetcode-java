@@ -1,20 +1,8 @@
 package _0024_Swap_Nodes_in_Pairs;
 
+import common.ListNode;
+
 public class Solution {
-    class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
-
     public ListNode swapPairs(ListNode head) {
         ListNode dummy = new ListNode(0, head);
         ListNode cur = dummy;
