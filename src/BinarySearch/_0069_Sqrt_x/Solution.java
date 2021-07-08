@@ -1,4 +1,4 @@
-package _0069_Sqrt_x;
+package BinarySearch._0069_Sqrt_x;
 
 public class Solution {
     // 牛顿迭代法

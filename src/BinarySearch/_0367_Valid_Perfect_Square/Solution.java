@@ -1,4 +1,4 @@
-package _0367_Valid_Perfect_Square;
+package BinarySearch._0367_Valid_Perfect_Square;
 
 public class Solution {
     public boolean isPerfectSquare(int num) {

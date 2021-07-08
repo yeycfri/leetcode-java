@@ -1,4 +1,4 @@
-package _0704_Binary_Search;
+package BinarySearch._0704_Binary_Search;
 
 public class Solution {
     public int search(int[] nums, int target) {

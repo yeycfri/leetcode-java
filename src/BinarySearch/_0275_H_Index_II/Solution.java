@@ -1,4 +1,4 @@
-package _0275_H_Index_II;
+package BinarySearch._0275_H_Index_II;
 
 public class Solution {
     public int hIndex(int[] citations) {

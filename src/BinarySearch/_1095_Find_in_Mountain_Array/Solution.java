@@ -1,4 +1,4 @@
-package _1095_Find_in_Mountain_Array;
+package BinarySearch._1095_Find_in_Mountain_Array;
 
 public class Solution {
     static class MountainArray {

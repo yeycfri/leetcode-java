@@ -1,4 +1,4 @@
-package _0035_Search_Insert_Position;
+package BinarySearch._0035_Search_Insert_Position;
 
 public class Solution {
     public int searchInsert(int[] nums, int target) {

@@ -1,4 +1,4 @@
-package _0300_Longest_Increasing_Subsequence;
+package BinarySearch._0300_Longest_Increasing_Subsequence;
 
 public class Solution {
     public int lengthOfLIS(int[] nums) {
