@@ -1,0 +1,18 @@
+package BinaryTree._0108_Convert_Sorted_Array_to_Binary_Search_Tree;
+
+import common.bst.TreeNode;
+
+public class Solution {
+    public TreeNode sortedArrayToBST(int[] nums) {
+        return build(nums, 0, nums.length - 1);
+    }
+
+    private TreeNode build(int[] nums, int left, int right) {
+        if (left > right) return null;
+        int mid = (left + right) >> 1;
+        TreeNode root = new TreeNode(nums[mid]);
+        root.left = build(nums, left, mid - 1);
+        root.right = build(nums, mid + 1, right);
+        return root;
+    }
+}
