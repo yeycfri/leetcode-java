@@ -85,6 +85,7 @@ for(int i = 0; i < weight.size(); i++) { // 遍历物品
 |---|---|---|
 |[518. 零钱兑换 II](https://leetcode-cn.com/problems/coin-change-2/)|中等|√|
 |[377. 组合总和 Ⅳ](https://leetcode-cn.com/problems/combination-sum-iv/)|中等|√|
+|[279. 完全平方数](https://leetcode-cn.com/problems/perfect-squares/)|中等|√|
 
 
 ## 参考
