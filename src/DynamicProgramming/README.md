@@ -23,7 +23,7 @@
 
 ![](https://camo.githubusercontent.com/5c5af3f54a3503cdb989ab1c28e2933202a33259608c70af0e72db5a858f14e6/68747470733a2f2f696d672d626c6f672e6373646e696d672e636e2f32303231303131373137313330373430372e706e67)
 
-### 题目
+### 01背包 题目
 |题目|难度||
 |---|---|---|
 |[416. 分割等和子集](https://leetcode-cn.com/problems/partition-equal-subset-sum/)|中等|√|
@@ -31,4 +31,4 @@
 |[698. 划分为k个相等的子集](https://leetcode-cn.com/problems/partition-to-k-equal-sum-subsets/)|中等||
 |[473. 火柴拼正方形](https://leetcode-cn.com/problems/matchsticks-to-square/)|中等||
 |[494. 目标和](https://leetcode-cn.com/problems/target-sum/)|中等|√|
-
+|[474. 一和零](https://leetcode-cn.com/problems/ones-and-zeroes/)|中等|√|
