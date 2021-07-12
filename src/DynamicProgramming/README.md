@@ -23,7 +23,36 @@
 
 ![](https://camo.githubusercontent.com/5c5af3f54a3503cdb989ab1c28e2933202a33259608c70af0e72db5a858f14e6/68747470733a2f2f696d672d626c6f672e6373646e696d672e636e2f32303231303131373137313330373430372e706e67)
 
-### 01背包 题目
+### 01背包
+
+物品列表item[0..n]，重量列表weight[0..n]，价值列表value[0..n]，背包重量bagWeight，每个物品只能取一次或不取。
+
+每个物品取或不取，dp[i][j]：从下标为[0..i]的物品里任意取，放进容量为j的背包，价值总和最大是多少。
+常见递推公式：
+- 求价值最大：`dp[i][j] = max(dp[i - 1][j], dp[i - 1][j - weight[i]] + value[i]);`
+- 求组合方法数：`dp[i][j] += dp[i - 1][j - weight[i]];`
+
+递推过程：
+``` java
+// 初始化后
+for(int i = 1; i < weight.length; i++) { // 遍历物品
+    for(int j = 0; j <= bagWeight; j++) { // 遍历背包容量
+        if (j < weight[i]) dp[i][j] = dp[i - 1][j]; 
+        else dp[i][j] = max(dp[i - 1][j], dp[i - 1][j - weight[i]] + value[i]);
+    }
+}
+```
+
+可简化为一维，dp[i]：容量为i的背包，所背的物品价值可以最大为dp[i]。此时背包重量要倒序遍历：
+``` java
+// 初始化后
+for(int i = 0; i < weight.length; i++) { // 遍历物品
+    for(int j = bagWeight; j >= weight[i]; j--) { // 倒序遍历背包容量
+        dp[j] = max(dp[j], dp[j - weight[i]] + value[i]);
+    }
+}
+```
+
 |题目|难度||
 |---|---|---|
 |[416. 分割等和子集](https://leetcode-cn.com/problems/partition-equal-subset-sum/)|中等|√|
@@ -32,3 +61,26 @@
 |[473. 火柴拼正方形](https://leetcode-cn.com/problems/matchsticks-to-square/)|中等||
 |[494. 目标和](https://leetcode-cn.com/problems/target-sum/)|中等|√|
 |[474. 一和零](https://leetcode-cn.com/problems/ones-and-zeroes/)|中等|√|
+
+### 完全背包
+
+物品列表item[0..n]，重量列表weight[0..n]，价值列表value[0..n]，背包重量bagWeight，每个物品能取无限次。
+
+01背包为了保证物品只用一次，背包容量要倒序遍历。完全背包的物品是可以添加多次的，所以背包容量正序遍历，即：
+``` java
+// 初始化后
+for(int i = 0; i < weight.size(); i++) { // 遍历物品
+    for(int j = weight[i]; j <= bagWeight ; j++) { // 正序遍历背包容量
+        dp[j] = max(dp[j], dp[j - weight[i]] + value[i]);
+    }
+}
+```
+一维滚动数组情况下，完全背包的物品与容量遍历顺序可以互换；而01背包不行，因为容量倒序遍历时，前面状态还未更新。
+
+|题目|难度||
+|---|---|---|
+|[518. 零钱兑换 II](https://leetcode-cn.com/problems/coin-change-2/)|中等|√|
+
+
+## 参考
+- 代码随想录 [https://github.com/youngyangyang04/leetcode-master](https://github.com/youngyangyang04/leetcode-master)
