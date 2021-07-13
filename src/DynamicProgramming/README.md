@@ -18,6 +18,9 @@
 |[63. 不同路径 II](https://leetcode-cn.com/problems/unique-paths-ii/)|中等|√|
 |[343. 整数拆分](https://leetcode-cn.com/problems/integer-break/)|中等|√|
 |[96. 不同的二叉搜索树](https://leetcode-cn.com/problems/unique-binary-search-trees/)|中等|√|
+|[198. 打家劫舍](https://leetcode-cn.com/problems/house-robber/)|中等|√|
+|[213. 打家劫舍 II](https://leetcode-cn.com/problems/house-robber-ii/)|
+|[337. 打家劫舍 III](https://leetcode-cn.com/problems/house-robber-iii/)|
 
 ## 背包问题
 
@@ -89,6 +92,32 @@ for(int i = 0; i < weight.size(); i++) { // 遍历物品
 |[279. 完全平方数](https://leetcode-cn.com/problems/perfect-squares/)|中等|√|
 |[139. 单词拆分](https://leetcode-cn.com/problems/word-break/)|中等|√|
 
+### 多重背包
+
+物品列表item[0..n]，重量列表weight[0..n]，价值列表value[0..n]，数量列表amount[0..n]，背包重量bagWeight。
+
+解决方法：
+- 物品item_i有amount_i件可用，把amount_i件摊开，转化为01背包。
+``` java
+for (int i = 0; i < amount.length; i++) {
+    while (amount[i] > 1) { // amount[i]展开至保留到1
+        weight.add(weight[i]);
+        value.add(value[i]);
+        amount[i]--;
+    }
+}
+```
+- 01背包最内层再遍历一次每种商品的个数。
+``` java
+for(int i = 0; i < weight.length; i++) { // 遍历物品
+    for(int j = bagWeight; j >= weight[i]; j--) { // 遍历背包容量
+        // 以上为01背包，然后再遍历物品个数
+        for (int k = 1; k <= amount[i] && (j - k * weight[i]) >= 0; k++) { // 遍历物品个数
+            dp[j] = max(dp[j], dp[j - k * weight[i]] + k * value[i]);
+        }
+    }
+}
+```
 
 ## 参考
 - 代码随想录 [https://github.com/youngyangyang04/leetcode-master](https://github.com/youngyangyang04/leetcode-master)
