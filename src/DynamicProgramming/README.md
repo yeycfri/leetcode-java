@@ -9,6 +9,7 @@
 5. 举例推导dp数组
 
 ### 题目
+
 |题目|难度||
 |---|---|---|
 |[509. 斐波那契数](https://leetcode-cn.com/problems/fibonacci-number/)|简单|√|
@@ -26,7 +27,19 @@
 |[123. 买卖股票的最佳时机 III](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/)|困难|√|
 |[188. 买卖股票的最佳时机 IV](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/)|困难|√|
 |[309. 最佳买卖股票时机含冷冻期](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)|中等|√|
-|[714. 买卖股票的最佳时机含手续费](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)|中等|
+|[714. 买卖股票的最佳时机含手续费](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)|中等|√|
+|[300. 最长递增子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/)|中等
+|[674. 最长连续递增序列](https://leetcode-cn.com/problems/longest-continuous-increasing-subsequence/)|简单
+|[718. 最长重复子数组](https://leetcode-cn.com/problems/maximum-length-of-repeated-subarray/)|中等
+|[1143. 最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/)|中等
+|[1035. 不相交的线](https://leetcode-cn.com/problems/uncrossed-lines/)|中等
+|[53. 最大子序和](https://leetcode-cn.com/problems/maximum-subarray/)|简单
+|[392. 判断子序列](https://leetcode-cn.com/problems/is-subsequence/)|简单
+|[115. 不同的子序列](https://leetcode-cn.com/problems/distinct-subsequences/)|困难
+|[583. 两个字符串的删除操作](https://leetcode-cn.com/problems/delete-operation-for-two-strings/)|中等
+|[72. 编辑距离](https://leetcode-cn.com/problems/edit-distance/)|困难
+|[647. 回文子串](https://leetcode-cn.com/problems/palindromic-substrings/)|中等
+|[516. 最长回文子序列](https://leetcode-cn.com/problems/longest-palindromic-subsequence/)|中等
 
 ## 背包问题
 
@@ -36,12 +49,13 @@
 
 物品列表item[0..n]，重量列表weight[0..n]，价值列表value[0..n]，背包重量bagWeight，每个物品只能取一次或不取。
 
-每个物品取或不取，dp[i][j]：从下标为[0..i]的物品里任意取，放进容量为j的背包，价值总和最大是多少。
-常见递推公式：
+每个物品取或不取，dp[i][j]：从下标为[0..i]的物品里任意取，放进容量为j的背包，价值总和最大是多少。 常见递推公式：
+
 - 求价值最大：`dp[i][j] = max(dp[i - 1][j], dp[i - 1][j - weight[i]] + value[i]);`
 - 求排列组合数：`dp[i][j] += dp[i - 1][j - weight[i]];`
 
 递推过程：
+
 ``` java
 // 初始化后
 for(int i = 1; i < weight.length; i++) { // 遍历物品
@@ -53,6 +67,7 @@ for(int i = 1; i < weight.length; i++) { // 遍历物品
 ```
 
 可简化为一维，dp[i]：容量为i的背包，所背的物品价值可以最大为dp[i]。此时背包重量要倒序遍历：
+
 ``` java
 // 初始化后
 for(int i = 0; i < weight.length; i++) { // 遍历物品
@@ -61,6 +76,7 @@ for(int i = 0; i < weight.length; i++) { // 遍历物品
     }
 }
 ```
+
 注意：*01背包的物品与容量遍历顺序不可互换，因为容量倒序遍历时，前面状态还未更新。*
 
 |题目|难度||
@@ -77,6 +93,7 @@ for(int i = 0; i < weight.length; i++) { // 遍历物品
 物品列表item[0..n]，重量列表weight[0..n]，价值列表value[0..n]，背包重量bagWeight，每个物品能取无限次。
 
 01背包为了保证物品只用一次，背包容量要倒序遍历。完全背包的物品是可以添加多次的，所以背包容量正序遍历，即：
+
 ``` java
 // 初始化后
 for(int i = 0; i < weight.size(); i++) { // 遍历物品
@@ -85,7 +102,9 @@ for(int i = 0; i < weight.size(); i++) { // 遍历物品
     }
 }
 ```
+
 一维滚动数组情况下，完全背包的物品与容量遍历顺序确定：
+
 - 求价值数，物品与容量遍历顺序可以互换。
 - 求组合数，就是外层遍历物品，内层遍历容量。
 - 求排列数，就是外层遍历容量，内层遍历物品。
@@ -103,7 +122,9 @@ for(int i = 0; i < weight.size(); i++) { // 遍历物品
 物品列表item[0..n]，重量列表weight[0..n]，价值列表value[0..n]，数量列表amount[0..n]，背包重量bagWeight。
 
 解决方法：
+
 - 物品item_i有amount_i件可用，把amount_i件摊开，转化为01背包。
+
 ``` java
 for (int i = 0; i < amount.length; i++) {
     while (amount[i] > 1) { // amount[i]展开至保留到1
@@ -113,7 +134,9 @@ for (int i = 0; i < amount.length; i++) {
     }
 }
 ```
+
 - 01背包最内层再遍历一次每种商品的个数。
+
 ``` java
 for(int i = 0; i < weight.length; i++) { // 遍历物品
     for(int j = bagWeight; j >= weight[i]; j--) { // 遍历背包容量
@@ -126,4 +149,5 @@ for(int i = 0; i < weight.length; i++) { // 遍历物品
 ```
 
 ## 参考
+
 - 代码随想录 [https://github.com/youngyangyang04/leetcode-master](https://github.com/youngyangyang04/leetcode-master)
