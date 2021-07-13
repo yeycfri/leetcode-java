@@ -22,7 +22,7 @@
 |[213. 打家劫舍 II](https://leetcode-cn.com/problems/house-robber-ii/)|中等|√|
 |[337. 打家劫舍 III](https://leetcode-cn.com/problems/house-robber-iii/)|中等|√|
 |[121. 买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)|简单|√|
-|[122. 买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)|简单|
+|[122. 买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)|简单|√|
 |[123. 买卖股票的最佳时机 III](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/)|困难|
 |[188. 买卖股票的最佳时机 IV](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/)|困难|
 |[309. 最佳买卖股票时机含冷冻期](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)|中等|
