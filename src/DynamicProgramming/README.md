@@ -29,7 +29,7 @@
 |[309. 最佳买卖股票时机含冷冻期](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)|中等|√|
 |[714. 买卖股票的最佳时机含手续费](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)|中等|√|
 |[300. 最长递增子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/)|中等|√|
-|[674. 最长连续递增序列](https://leetcode-cn.com/problems/longest-continuous-increasing-subsequence/)|简单
+|[674. 最长连续递增序列](https://leetcode-cn.com/problems/longest-continuous-increasing-subsequence/)|简单|√|
 |[718. 最长重复子数组](https://leetcode-cn.com/problems/maximum-length-of-repeated-subarray/)|中等
 |[1143. 最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/)|中等
 |[1035. 不相交的线](https://leetcode-cn.com/problems/uncrossed-lines/)|中等
