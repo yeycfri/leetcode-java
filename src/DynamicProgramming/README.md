@@ -37,7 +37,7 @@
 |[392. 判断子序列](https://leetcode-cn.com/problems/is-subsequence/)|简单|√|
 |[115. 不同的子序列](https://leetcode-cn.com/problems/distinct-subsequences/)|困难|√|
 |[583. 两个字符串的删除操作](https://leetcode-cn.com/problems/delete-operation-for-two-strings/)|中等|√|
-|[72. 编辑距离](https://leetcode-cn.com/problems/edit-distance/)|困难
+|[72. 编辑距离](https://leetcode-cn.com/problems/edit-distance/)|困难|√|
 |[647. 回文子串](https://leetcode-cn.com/problems/palindromic-substrings/)|中等
 |[516. 最长回文子序列](https://leetcode-cn.com/problems/longest-palindromic-subsequence/)|中等
 
