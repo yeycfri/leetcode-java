@@ -32,7 +32,7 @@
 |[674. 最长连续递增序列](https://leetcode-cn.com/problems/longest-continuous-increasing-subsequence/)|简单|√|
 |[718. 最长重复子数组](https://leetcode-cn.com/problems/maximum-length-of-repeated-subarray/)|中等|√|
 |[1143. 最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/)|中等|√|
-|[1035. 不相交的线](https://leetcode-cn.com/problems/uncrossed-lines/)|中等
+|[1035. 不相交的线](https://leetcode-cn.com/problems/uncrossed-lines/)|中等|√|
 |[53. 最大子序和](https://leetcode-cn.com/problems/maximum-subarray/)|简单
 |[392. 判断子序列](https://leetcode-cn.com/problems/is-subsequence/)|简单
 |[115. 不同的子序列](https://leetcode-cn.com/problems/distinct-subsequences/)|困难
