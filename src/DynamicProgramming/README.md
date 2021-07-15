@@ -35,7 +35,7 @@
 |[1035. 不相交的线](https://leetcode-cn.com/problems/uncrossed-lines/)|中等|√|
 |[53. 最大子序和](https://leetcode-cn.com/problems/maximum-subarray/)|简单|√|
 |[392. 判断子序列](https://leetcode-cn.com/problems/is-subsequence/)|简单|√|
-|[115. 不同的子序列](https://leetcode-cn.com/problems/distinct-subsequences/)|困难
+|[115. 不同的子序列](https://leetcode-cn.com/problems/distinct-subsequences/)|困难|√|
 |[583. 两个字符串的删除操作](https://leetcode-cn.com/problems/delete-operation-for-two-strings/)|中等
 |[72. 编辑距离](https://leetcode-cn.com/problems/edit-distance/)|困难
 |[647. 回文子串](https://leetcode-cn.com/problems/palindromic-substrings/)|中等
