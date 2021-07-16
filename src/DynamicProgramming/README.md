@@ -84,7 +84,7 @@ for(int i = 0; i < weight.length; i++) { // 遍历物品
 |---|---|---|
 |[416. 分割等和子集](https://leetcode-cn.com/problems/partition-equal-subset-sum/)|中等|√|
 |[1049. 最后一块石头的重量 II](https://leetcode-cn.com/problems/last-stone-weight-ii/)|中等|√|
-|[698. 划分为k个相等的子集](https://leetcode-cn.com/problems/partition-to-k-equal-sum-subsets/)|中等||
+|[698. 划分为k个相等的子集](https://leetcode-cn.com/problems/partition-to-k-equal-sum-subsets/)|中等|√|
 |[473. 火柴拼正方形](https://leetcode-cn.com/problems/matchsticks-to-square/)|中等||
 |[494. 目标和](https://leetcode-cn.com/problems/target-sum/)|中等|√|
 |[474. 一和零](https://leetcode-cn.com/problems/ones-and-zeroes/)|中等|√|
