@@ -61,7 +61,6 @@ public class UnionFind {
 |[200. 岛屿数量](https://leetcode-cn.com/problems/number-of-islands/)|中等|√|
 |[305. 岛屿数量 II](https://leetcode-cn.com/problems/number-of-islands-ii/)|困难|√|
 |[827. 最大人工岛](https://leetcode-cn.com/problems/making-a-large-island/)|困难
-|[286. 墙与门](https://leetcode-cn.com/problems/walls-and-gates/)|中等
-|[323. 无向图中连通分量的数目](https://leetcode-cn.com/problems/number-of-connected-components-in-an-undirected-graph/)|中等
+|[323. 无向图中连通分量的数目](https://leetcode-cn.com/problems/number-of-connected-components-in-an-undirected-graph/)|中等|√|
 |[694. 不同岛屿的数量](https://leetcode-cn.com/problems/number-of-distinct-islands/)|中等
 |[695. 岛屿的最大面积](https://leetcode-cn.com/problems/max-area-of-island/)|中等
