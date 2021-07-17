@@ -56,4 +56,4 @@ public class UnionFind {
 |题目|难度||
 |---|---|---|
 |[130. 被围绕的区域](https://leetcode-cn.com/problems/surrounded-regions/)|中等|√|
-|[990. 等式方程的可满足性](https://leetcode-cn.com/problems/satisfiability-of-equality-equations/)|中等||
+|[990. 等式方程的可满足性](https://leetcode-cn.com/problems/satisfiability-of-equality-equations/)|中等|√|
