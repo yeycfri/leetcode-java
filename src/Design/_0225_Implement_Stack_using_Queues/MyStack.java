@@ -1,4 +1,4 @@
-package Stack._0225_Implement_Stack_using_Queues;
+package Design._0225_Implement_Stack_using_Queues;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
