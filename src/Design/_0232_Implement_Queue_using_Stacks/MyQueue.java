@@ -1,4 +1,4 @@
-package Queue._0232_Implement_Queue_using_Stacks;
+package Design._0232_Implement_Queue_using_Stacks;
 
 import java.util.Stack;
 
