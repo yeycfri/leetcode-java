@@ -1,4 +1,4 @@
-package Design._0208_Implement_Trie_Prefix_Tree;
+package Trie._0208_Implement_Trie_Prefix_Tree;
 
 public class Trie {
 
