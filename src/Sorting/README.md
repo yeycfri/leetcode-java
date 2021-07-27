@@ -137,13 +137,34 @@ public void insertSort(int[] arr) {
 }
 ```
 
-## 4. 堆排序 O(nlogn)
+## 4. 希尔排序 O(n) ～ O(n^2)
 
-## 5. 快速排序
+``` java
+public void shellSort(int[] nums) {
+    int n = nums.length;
+    for (int gap = n / 2; gap > 0; gap /= 2) {
+        for (int i = gap; i < n; i++) {
+            int num = nums[i];
+            int j = i - gap;
+            while (j >= 0 && num < nums[j]) {
+                nums[j + gap] = nums[j];
+                j -= gap;
+            }
+            nums[j + gap] = num;
+        }
+    }
+}
+```
 
-## 6. 归并排序 (Merge Sort)
+增量元素不互质，则小增量可能根本不起作用。
 
-## 7. 希尔排序
+事实上，希尔排序时间复杂度非常难以分析，它的平均复杂度界于 O(n) 到 O(n^2) 之间，普遍认为它最好的时间复杂度为 O(n^1.3)。
+
+## 5. 堆排序 O(nlogn)
+
+## 6. 快速排序
+
+## 7. 归并排序 (Merge Sort)
 
 ## 8. 计数排序 (Counting Sort)
 
@@ -156,3 +177,4 @@ public void insertSort(int[] arr) {
 |[912. 排序数组](https://leetcode-cn.com/problems/sort-an-array/)|中等||
 |[剑指 Offer 45. 把数组排成最小的数](https://leetcode-cn.com/problems/ba-shu-zu-pai-cheng-zui-xiao-de-shu-lcof/)|中等|√|
 |[147. 对链表进行插入排序](https://leetcode-cn.com/problems/insertion-sort-list/)|中等|√|
+|[506. 相对名次](https://leetcode-cn.com/problems/relative-ranks/)|简单|√|
