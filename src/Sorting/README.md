@@ -162,6 +162,51 @@ public void shellSort(int[] nums) {
 
 ## 5. 堆排序 O(nlogn)
 
+完全二叉树：深度为 k，k-1 层为满二叉树，第 k 层叶子节点向左靠齐。
+
+堆：符合以下两个条件之一的完全二叉树：
+
+- 根节点的值 ≥ 子节点的值，这样的堆被称之为最大堆，或大顶堆；
+- 根节点的值 ≤ 子节点的值，这样的堆被称之为最小堆，或小顶堆。
+
+完全二叉树数组中，根节点的下标视为 0，则数组有如下性质：
+
+- 对于完全二叉树中的第 i 个数，它的左子节点下标：left = 2i + 1
+- 对于完全二叉树中的第 i 个数，它的右子节点下标：right = left + 1
+- 对于有 n 个元素的完全二叉树 (n ≥ 2)，它的最后一个非叶子结点的下标：n/2 - 1
+
+``` java
+public void heapSort(int[] nums) {
+    buildHeap(nums);
+    int n = nums.length;
+    for (int i = n - 1; i > 0; i--) {
+        swap(nums, 0, i);
+        heapify(nums, 0, i);
+    }
+}
+
+private void buildHeap(int[] nums) {
+    int n = nums.length;
+    for (int i = (n >> 1) - 1; i >= 0; i--) {
+        heapify(nums, i, n);
+    }
+}
+
+private void heapify(int[] nums, int i, int size) {
+    int l = (i << 1) + 1, r = l + 1, large = i;
+    if (l < size && nums[l] > nums[large]) {
+        large = l;
+    }
+    if (r < size && nums[r] > nums[large]) {
+        large = r;
+    }
+    if (large != i) {
+        swap(nums, large, i);
+        heapify(nums, large, size);
+    }
+}
+```
+
 ## 6. 快速排序
 
 ## 7. 归并排序 (Merge Sort)
