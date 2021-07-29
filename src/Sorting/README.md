@@ -292,3 +292,4 @@ private void merge(int[] arr, int l, int mid, int r, int[] temp) {
 |[剑指 Offer 45. 把数组排成最小的数](https://leetcode-cn.com/problems/ba-shu-zu-pai-cheng-zui-xiao-de-shu-lcof/)|中等|√|
 |[147. 对链表进行插入排序](https://leetcode-cn.com/problems/insertion-sort-list/)|中等|√|
 |[506. 相对名次](https://leetcode-cn.com/problems/relative-ranks/)|简单|√|
+|[面试题 10.01. 合并排序的数组](https://leetcode-cn.com/problems/sorted-merge-lcci/)|简单|√|
