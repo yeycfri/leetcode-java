@@ -21,7 +21,7 @@
 |快速排序|O(nlogn) ～ O(n^2)|O(logn) ～ O(n)|不稳定|
 |归并排序|O(nlogn)|O(n)|稳定|
 |计数排序|O(n+k)|O(n+k)|稳定|
-|基数排序||||
+|基数排序|O(d(n+k))|O(n+k)|稳定|
 |桶排序||||
 
 ## 0. 交换
@@ -297,15 +297,13 @@ public void countingSort(int[] nums) {
     for (int num : nums) {
         counting[num - min]++;
     }
-    counting[0]--;
     for (int i = 1; i < range; i++) {
         counting[i] += counting[i - 1];
     }
     int[] temp = new int[n];
     // 此处倒序正序都可，但正序会导致不稳定
     for (int i = n - 1; i >= 0; i--) {
-        temp[counting[nums[i] - min]] = nums[i];
-        counting[nums[i] - min]--;
+        temp[--counting[nums[i] - min]] = nums[i];
     }
     for (int i = 0; i < n; i++) {
         nums[i] = temp[i];
@@ -314,6 +312,42 @@ public void countingSort(int[] nums) {
 ```
 
 ## 9. 基数排序 (Radix Sort)
+
+- 最高位优先法，简称 MSD (Most significant digital)
+- 最低位优先法，简称 LSD (Least significant digital)
+
+基数排序的时间复杂度为 O(d(n+k)) (d 表示最长数字的位数，k 表示每个基数可能的取值范围大小)。 使用的空间和计数排序一样，空间复杂度为 O(n+k)（k 表示每个基数可能的取值范围大小）。如果是对非负整数排序，则 k = 10，如果是对包含负数的数组排序，则 k = 19。
+
+含负数排序，counting 数组的下标 [0, 18] 对应基数 [−9, 9]。
+
+``` java
+// LSD 实现
+public void radixSort(int[] arr) {
+    int max = 0, maxDigitLen = 0;;
+    for (int val : arr) max = Math.max(max, Math.abs(val));
+    while (max != 0) {
+        maxDigitLen++;
+        max /= 10;
+    }
+    int n = arr.length, dev = 1;
+    int[] counting = new int[19], temp = new int[n];
+    for (int i = 0; i < maxDigitLen; i++) {
+        for (int val : arr) {
+            int radix = val / dev % 10 + 9;
+            counting[radix]++;
+        }
+        for (int j = 1; j < 19; j++)
+            counting[j] += counting[j - 1];
+        for (int j = n - 1; j >= 0; j--) {
+            int radix = arr[j] / dev % 10 + 9;
+            temp[--counting[radix]] = arr[j];
+        }
+        System.arraycopy(temp, 0, arr, 0, n);
+        Arrays.fill(counting, 0);
+        dev *= 10;
+    }
+}
+```
 
 ## 10. 桶排序 (Bucket Sort)
 

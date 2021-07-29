@@ -159,16 +159,41 @@ public class Solution {
         for (int num : nums) {
             counting[num - min]++;
         }
-        counting[0]--;
         for (int i = 1; i < range; i++) {
             counting[i] += counting[i - 1];
         }
         int[] temp = new int[n];
         for (int i = n - 1; i >= 0; i--) {
-            temp[counting[nums[i] - min]] = nums[i];
-            counting[nums[i] - min]--;
+            temp[--counting[nums[i] - min]] = nums[i];
         }
         return temp;
+    }
+
+    public int[] sortArrayRadix(int[] nums) {
+        int max = 0, maxDigitLen = 0;
+        for (int num : nums) max = Math.max(max, Math.abs(num));
+        while (max != 0) {
+            maxDigitLen++;
+            max /= 10;
+        }
+        int n = nums.length, dev = 1;
+        int[] counting = new int[19], temp = new int[n];
+        for (int i = 0; i < maxDigitLen; i++) {
+            for (int num : nums) {
+                int radix = num / dev % 10 + 9;
+                counting[radix]++;
+            }
+            for (int j = 1; j < 19; j++)
+                counting[j] += counting[j - 1];
+            for (int j = n - 1; j >= 0; j--) {
+                int radix = nums[j] / dev % 10 + 9;
+                temp[--counting[radix]] = nums[j];
+            }
+            System.arraycopy(temp, 0, nums, 0, n);
+            Arrays.fill(counting, 0);
+            dev *= 10;
+        }
+        return nums;
     }
 
     public static void main(String[] args) {
@@ -181,5 +206,6 @@ public class Solution {
         System.out.println(Arrays.toString(solution.sortArrayQuick(new int[]{1, 5, 2, 3, 1})));
         System.out.println(Arrays.toString(solution.sortArrayMerge(new int[]{1, 5, 2, 3, 1})));
         System.out.println(Arrays.toString(solution.sortArrayCounting(new int[]{1, 5, 2, 3, 1})));
+        System.out.println(Arrays.toString(solution.sortArrayRadix(new int[]{1, 5, 2, 3, 1})));
     }
 }
