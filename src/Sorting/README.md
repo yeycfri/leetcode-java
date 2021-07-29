@@ -207,7 +207,32 @@ private void heapify(int[] nums, int i, int size) {
 }
 ```
 
-## 6. 快速排序
+## 6. 快速排序 O(nlogn) ～ O(n^2)
+
+挖坑填空+分治
+
+时间复杂度 O(nlogn) ～ O(n^2)，平均时间复杂度 O(nlogn)
+
+空间复杂度 O(logn) ～ O(n)，平均时间复杂度 O(logn)
+
+``` java
+public void quickSort(int[] arr, int l, int r) {
+    if (l >= r) return;
+    
+    int i = l, j = r, p = l + ((r - l) >> 1);
+    swap(arr, l, p);
+    int x = arr[l];
+    while (i < j) {
+        while (i < j && arr[j] >= x) j--;
+        if (i < j) arr[i] = arr[j];
+        while (i < j && arr[i] <= x) i++;
+        if (i < j) arr[j] = arr[i];
+    }
+    arr[i] = x;
+    quickSort(arr, l, i - 1);
+    quickSort(arr, i + 1, r);
+}
+```
 
 ## 7. 归并排序 (Merge Sort)
 
