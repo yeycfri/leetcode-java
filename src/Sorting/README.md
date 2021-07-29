@@ -20,7 +20,7 @@
 |堆排序|O(nlogn)|O(1)|不稳定|
 |快速排序|O(nlogn) ～ O(n^2)|O(logn) ～ O(n)|不稳定|
 |归并排序|O(nlogn)|O(n)|稳定|
-|计数排序||||
+|计数排序|O(n+k)|O(n+k)|稳定|
 |基数排序||||
 |桶排序||||
 
@@ -279,7 +279,39 @@ private void merge(int[] arr, int l, int mid, int r, int[] temp) {
 }
 ```
 
-## 8. 计数排序 (Counting Sort)
+## 8. 计数排序 (Counting Sort) O(n+k)
+
+计数排序的时间复杂度为 O(n+k)，k 表示数据的范围大小，空间复杂度为 O(n+k)。
+
+``` java
+public void countingSort(int[] nums) {
+    if (nums == null || nums.length < 2) return;
+
+    int n = nums.length, min = nums[0], max = nums[0];
+    for (int num : nums) {
+        min = Math.min(min, num);
+        max = Math.max(max, num);
+    }
+    int range = max - min + 1;
+    int[] counting = new int[range];
+    for (int num : nums) {
+        counting[num - min]++;
+    }
+    counting[0]--;
+    for (int i = 1; i < range; i++) {
+        counting[i] += counting[i - 1];
+    }
+    int[] temp = new int[n];
+    // 此处倒序正序都可，但正序会导致不稳定
+    for (int i = n - 1; i >= 0; i--) {
+        temp[counting[nums[i] - min]] = nums[i];
+        counting[nums[i] - min]--;
+    }
+    for (int i = 0; i < n; i++) {
+        nums[i] = temp[i];
+    }
+}
+```
 
 ## 9. 基数排序 (Radix Sort)
 

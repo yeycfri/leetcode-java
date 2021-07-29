@@ -146,6 +146,31 @@ public class Solution {
         for (cur = 0; l <= r; ) arr[l++] = temp[cur++];
     }
 
+    public int[] sortArrayCounting(int[] nums) {
+        if (nums == null || nums.length < 2) return nums;
+
+        int n = nums.length, min = nums[0], max = nums[0];
+        for (int num : nums) {
+            min = Math.min(min, num);
+            max = Math.max(max, num);
+        }
+        int range = max - min + 1;
+        int[] counting = new int[range];
+        for (int num : nums) {
+            counting[num - min]++;
+        }
+        counting[0]--;
+        for (int i = 1; i < range; i++) {
+            counting[i] += counting[i - 1];
+        }
+        int[] temp = new int[n];
+        for (int i = n - 1; i >= 0; i--) {
+            temp[counting[nums[i] - min]] = nums[i];
+            counting[nums[i] - min]--;
+        }
+        return temp;
+    }
+
     public static void main(String[] args) {
         Solution solution = new Solution();
         System.out.println(Arrays.toString(solution.sortArrayBubble(new int[]{1, 5, 2, 3, 1})));
@@ -155,5 +180,6 @@ public class Solution {
         System.out.println(Arrays.toString(solution.sortArrayHeap(new int[]{1, 5, 2, 3, 1})));
         System.out.println(Arrays.toString(solution.sortArrayQuick(new int[]{1, 5, 2, 3, 1})));
         System.out.println(Arrays.toString(solution.sortArrayMerge(new int[]{1, 5, 2, 3, 1})));
+        System.out.println(Arrays.toString(solution.sortArrayCounting(new int[]{1, 5, 2, 3, 1})));
     }
 }
