@@ -377,3 +377,4 @@ int bucketId = (arr[i] - min) / interval;
 |[220. 存在重复元素 III](https://leetcode-cn.com/problems/contains-duplicate-iii/)|中等|√|
 |[347. 前 K 个高频元素](https://leetcode-cn.com/problems/top-k-frequent-elements/)|中等|√|
 |[215. 数组中的第K个最大元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)|中等|√|
+|[692. 前K个高频单词](https://leetcode-cn.com/problems/top-k-frequent-words/)|中等|√|
