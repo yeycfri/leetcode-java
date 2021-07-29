@@ -121,6 +121,32 @@ public class Solution {
         quickSort(arr, i + 1, r);
     }
 
+    public int[] sortArrayMerge(int[] nums) {
+        int[] temp = new int[nums.length];
+        mergeSort(nums, 0, nums.length - 1, temp);
+        return nums;
+    }
+
+    private void mergeSort(int[] arr, int l, int r, int[] temp) {
+        if (l >= r) return;
+        int mid = l + ((r - l) >> 1);
+        mergeSort(arr, l, mid, temp);
+        mergeSort(arr, mid + 1, r, temp);
+        merge(arr, l, mid, r, temp);
+    }
+
+    private void merge(int[] arr, int l, int mid, int r, int[] temp) {
+        int i = l, j = mid + 1, t = 0;
+        while (i <= mid && j <= r) {
+            if (arr[i] <= arr[j]) temp[t++] = arr[i++];
+            else temp[t++] = arr[j++];
+        }
+        while (i <= mid) temp[t++] = arr[i++];
+        while (j <= r) temp[t++] = arr[j++];
+        t = 0;
+        while (l <= r) arr[l++] = temp[t++];
+    }
+
     public static void main(String[] args) {
         Solution solution = new Solution();
         System.out.println(Arrays.toString(solution.sortArrayBubble(new int[]{1, 5, 2, 3, 1})));
@@ -129,5 +155,6 @@ public class Solution {
         System.out.println(Arrays.toString(solution.sortArrayShell(new int[]{1, 5, 2, 3, 1})));
         System.out.println(Arrays.toString(solution.sortArrayHeap(new int[]{1, 5, 2, 3, 1})));
         System.out.println(Arrays.toString(solution.sortArrayQuick(new int[]{1, 5, 2, 3, 1})));
+        System.out.println(Arrays.toString(solution.sortArrayMerge(new int[]{1, 5, 2, 3, 1})));
     }
 }

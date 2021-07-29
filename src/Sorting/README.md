@@ -1,6 +1,6 @@
 # 排序
 
-1. 稳定性
+### 稳定性
 
 排序算法的稳定性：假定在待排序的记录序列中，存在多个具有相同的关键字的记录，若经过排序，这些记录的相对次序保持不变，即在原序列中，r[i] = r[j]，且 r[i] 在 r[j] 之前，而在排序后的序列中，r[i] 仍在 r[j]
 之前，则称这种排序算法是稳定的；否则称为不稳定的。
@@ -8,6 +8,21 @@
 稳定性的意义：当要排序的内容是一个对象的多个属性，且其原本的顺序存在意义时，如果我们需要在二次排序后保持原有排序的意义，就需要使用到稳定性的算法。
 
 举个例子，如果我们要对一组商品排序，商品存在两个属性：价格和销量。当我们按照价格从高到低排序后，要再按照销量对其排序，这时，如果要保证销量相同的商品仍保持价格从高到低的顺序，就必须使用稳定性算法。
+
+### 排序算法性质总结
+
+|排序算法|时间复杂度|空间复杂度|稳定性|
+|:---:|:---:|:---:|:---:|
+|冒泡排序|O(n^2)|O(1)|稳定|
+|选择排序|O(n^2)|O(1)|不稳定|
+|插入排序|O(n^2)|O(1)|稳定|
+|希尔排序|O(n) ～ O(n^2)|O(1)|不稳定|
+|堆排序|O(nlogn)|O(1)|不稳定|
+|快速排序|O(nlogn) ～ O(n^2)|O(logn) ～ O(n)|不稳定|
+|归并排序|O(nlogn)|O(n)|稳定|
+|计数排序||||
+|基数排序||||
+|桶排序||||
 
 ## 0. 交换
 
@@ -234,7 +249,36 @@ public void quickSort(int[] arr, int l, int r) {
 }
 ```
 
-## 7. 归并排序 (Merge Sort)
+## 7. 归并排序 (Merge Sort) O(nlogn)
+
+原地归并排序需要不断腾挪位置以插入新数字，本质是插入排序。因此，归并排序必然需要额外 O(n) 空间。
+
+``` java
+public void mergeSort(int[] nums) {
+    int[] temp = new int[nums.length];
+    sort(nums, 0, nums.length - 1, temp);
+}
+
+private void sort(int[] arr, int l, int r, int[] temp) {
+    if (l >= r) return;
+    int mid = l + ((r - l) >> 1);
+    sort(arr, l, mid, temp);
+    sort(arr, mid + 1, r, temp);
+    merge(arr, l, mid, r, temp);
+}
+
+private void merge(int[] arr, int l, int mid, int r, int[] temp) {
+    int i = l, j = mid + 1, t = 0;
+    while (i <= mid && j <= r) {
+        if (arr[i] <= arr[j]) temp[t++] = arr[i++];
+        else temp[t++] = arr[j++];
+    }
+    while (i <= mid) temp[t++] = arr[i++];
+    while (j <= r) temp[t++] = arr[j++];
+    t = 0;
+    while (l <= r) arr[l++] = temp[t++];
+}
+```
 
 ## 8. 计数排序 (Counting Sort)
 
