@@ -374,3 +374,4 @@ int bucketId = (arr[i] - min) / interval;
 |[1122. 数组的相对排序](https://leetcode-cn.com/problems/relative-sort-array/)|简单|√|
 |[164. 最大间距](https://leetcode-cn.com/problems/maximum-gap/)|困难|√|
 |[561. 数组拆分 I](https://leetcode-cn.com/problems/array-partition-i/)|简单|√|
+|[220. 存在重复元素 III](https://leetcode-cn.com/problems/contains-duplicate-iii/)|中等|√|
