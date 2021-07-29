@@ -22,7 +22,6 @@
 |归并排序|O(nlogn)|O(n)|稳定|
 |计数排序|O(n+k)|O(n+k)|稳定|
 |基数排序|O(d(n+k))|O(n+k)|稳定|
-|桶排序||||
 
 ## 0. 交换
 
@@ -351,11 +350,22 @@ public void radixSort(int[] arr) {
 
 ## 10. 桶排序 (Bucket Sort)
 
+桶排序是计数排序的扩展版本，计数排序可以看成每个桶只存储相同元素，而桶排序每个桶存储一定范围的元素，通过映射函数，将待排序数组中的元素映射到各个对应的桶中，对每个桶中的元素进行排序，最后将非空桶中的元素逐个放入原序列中。
 
+``` java
+// 划分为 n 份
+int interval = (max - min) / n + 1;
+
+// n 个桶
+int[][] bucket = new int[n][];
+
+// 映射桶 ID
+int bucketId = (arr[i] - min) / interval;
+```
 
 |题目|难度||
 |---|---|---|
-|[912. 排序数组](https://leetcode-cn.com/problems/sort-an-array/)|中等||
+|[912. 排序数组](https://leetcode-cn.com/problems/sort-an-array/)|中等|√|
 |[剑指 Offer 45. 把数组排成最小的数](https://leetcode-cn.com/problems/ba-shu-zu-pai-cheng-zui-xiao-de-shu-lcof/)|中等|√|
 |[147. 对链表进行插入排序](https://leetcode-cn.com/problems/insertion-sort-list/)|中等|√|
 |[506. 相对名次](https://leetcode-cn.com/problems/relative-ranks/)|简单|√|

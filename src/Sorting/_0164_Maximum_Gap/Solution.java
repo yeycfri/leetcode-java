@@ -39,4 +39,33 @@ public class Solution {
             dev *= 10;
         }
     }
+
+    // use bucket sort
+    public int maximumGapBucket(int[] nums) {
+        int min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;
+        for (int val : nums) {
+            min = Math.min(min, val);
+            max = Math.max(max, val);
+        }
+        if (max == min) return 0;
+
+        int n = nums.length;
+        int interval = (max - min) / n + 1;
+        int[] bucketMin = new int[n + 1];
+        int[] bucketMax = new int[n + 1];
+        Arrays.fill(bucketMin, Integer.MAX_VALUE);
+        Arrays.fill(bucketMax, Integer.MIN_VALUE);
+        for (int num : nums) {
+            int bIdx = (num - min) / interval;
+            bucketMin[bIdx] = Math.min(bucketMin[bIdx], num);
+            bucketMax[bIdx] = Math.max(bucketMax[bIdx], num);
+        }
+        int preMax = min, ans = 0;
+        for (int i = 0; i < n + 1; i++) {
+            if (bucketMax[i] == Integer.MIN_VALUE) continue;
+            ans = Math.max(ans, bucketMin[i] - preMax);
+            preMax = bucketMax[i];
+        }
+        return ans;
+    }
 }
