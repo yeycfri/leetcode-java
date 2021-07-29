@@ -136,15 +136,14 @@ public class Solution {
     }
 
     private void merge(int[] arr, int l, int mid, int r, int[] temp) {
-        int i = l, j = mid + 1, t = 0;
+        int i = l, j = mid + 1, cur = 0;
         while (i <= mid && j <= r) {
-            if (arr[i] <= arr[j]) temp[t++] = arr[i++];
-            else temp[t++] = arr[j++];
+            if (arr[i] <= arr[j]) temp[cur++] = arr[i++];
+            else temp[cur++] = arr[j++];
         }
-        while (i <= mid) temp[t++] = arr[i++];
-        while (j <= r) temp[t++] = arr[j++];
-        t = 0;
-        while (l <= r) arr[l++] = temp[t++];
+        while (i <= mid) temp[cur++] = arr[i++];
+        while (j <= r) temp[cur++] = arr[j++];
+        for (cur = 0; l <= r; ) arr[l++] = temp[cur++];
     }
 
     public static void main(String[] args) {
