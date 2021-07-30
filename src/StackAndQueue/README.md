@@ -30,7 +30,7 @@ for (E e : elements) {
 |题目|难度||
 |---|---|---|
 |[496. 下一个更大元素 I](https://leetcode-cn.com/problems/next-greater-element-i/)|简单|√|
-|[503. 下一个更大元素 II](https://leetcode-cn.com/problems/next-greater-element-ii/)|中等
+|[503. 下一个更大元素 II](https://leetcode-cn.com/problems/next-greater-element-ii/)|中等|√|
 |[556. 下一个更大元素 III](https://leetcode-cn.com/problems/next-greater-element-iii/)|中等
 |[42. 接雨水](https://leetcode-cn.com/problems/trapping-rain-water/)|困难
 |[739. 每日温度](https://leetcode-cn.com/problems/daily-temperatures/)|中等
