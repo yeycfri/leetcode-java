@@ -33,6 +33,6 @@ for (E e : elements) {
 |[503. 下一个更大元素 II](https://leetcode-cn.com/problems/next-greater-element-ii/)|中等|√|
 |[42. 接雨水](https://leetcode-cn.com/problems/trapping-rain-water/)|困难
 |[739. 每日温度](https://leetcode-cn.com/problems/daily-temperatures/)|中等|√|
-|[901. 股票价格跨度](https://leetcode-cn.com/problems/online-stock-span/)|中等
+|[901. 股票价格跨度](https://leetcode-cn.com/problems/online-stock-span/)|中等|√|
 
 # 单调队列
