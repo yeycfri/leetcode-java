@@ -61,3 +61,4 @@ for (E e : elements) {
 |[剑指 Offer 59 - II. 队列的最大值](https://leetcode-cn.com/problems/dui-lie-de-zui-da-zhi-lcof/)|中等|√|
 |[1696. 跳跃游戏 VI](https://leetcode-cn.com/problems/jump-game-vi/)|中等|√|
 |[862. 和至少为 K 的最短子数组](https://leetcode-cn.com/problems/shortest-subarray-with-sum-at-least-k/)|困难|√|
+|[918. 环形子数组的最大和](https://leetcode-cn.com/problems/maximum-sum-circular-subarray/)|中等|√|
