@@ -37,9 +37,26 @@ for (E e : elements) {
 
 # 单调队列
 
+单调 + 双端队列
+
+``` java
+for (E e : elements) {
+    while (!deque.isEmpty() && deque.peekLast() < target) {
+        deque.pollLast();
+    }
+    deque.offerLast(e);
+    
+    // 此时队首为最大值
+    doSomething(deque.peekFirst());
+}
+```
+
+与滑动窗口结合时，一般单调队列中会保存下标，用于从队首弹出窗口外的元素。
+
 |题目|难度||
 |---|---|---|
 |[239. 滑动窗口最大值](https://leetcode-cn.com/problems/sliding-window-maximum/)|困难|√|
 |[1438. 绝对差不超过限制的最长连续子数组](https://leetcode-cn.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/)|中等|√|
 |[剑指 Offer 59 - I. 滑动窗口的最大值](https://leetcode-cn.com/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof/)|困难|√|
 |[剑指 Offer 59 - II. 队列的最大值](https://leetcode-cn.com/problems/dui-lie-de-zui-da-zhi-lcof/)|中等|√|
+|[1696. 跳跃游戏 VI](https://leetcode-cn.com/problems/jump-game-vi/)|中等|√|
