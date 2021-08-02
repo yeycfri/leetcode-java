@@ -27,15 +27,4 @@ for (int i = 0; i < nums.length; i++) {
 |[1248. 统计「优美子数组」](https://leetcode-cn.com/problems/count-number-of-nice-subarrays/)|中等|√|
 |[974. 和可被 K 整除的子数组](https://leetcode-cn.com/problems/subarray-sums-divisible-by-k/)|中等|√|
 |[523. 连续的子数组和](https://leetcode-cn.com/problems/continuous-subarray-sum/)|中等|√|
-|[238. 除自身以外数组的乘积](https://leetcode-cn.com/problems/product-of-array-except-self/)|中等
-|[327. 区间和的个数](https://leetcode-cn.com/problems/count-of-range-sum/)|困难
-
-## 1. 静态前缀和
-
-## 2. 动态前缀和
-
-## 3. 阶段前缀和
-
-## 4. 阶段数量为固定数的前缀和
-
-## 5. 树状数组
+|[238. 除自身以外数组的乘积](https://leetcode-cn.com/problems/product-of-array-except-self/)|中等|√|
