@@ -90,6 +90,6 @@ if (j + 1 < diff.length) {
 |---|---|---|
 |[1109. 航班预订统计](https://leetcode-cn.com/problems/corporate-flight-bookings/)|中等|√|
 |[1094. 拼车](https://leetcode-cn.com/problems/car-pooling/)|中等|√|
-|[1854. 人口最多的年份](https://leetcode-cn.com/problems/maximum-population-year/)|简单
+|[1854. 人口最多的年份](https://leetcode-cn.com/problems/maximum-population-year/)|简单|√|
 |[面试题 16.10. 生存人数](https://leetcode-cn.com/problems/living-people-lcci/)|中等
 |[1943. 描述绘画结果](https://leetcode-cn.com/problems/describe-the-painting/)|中等
