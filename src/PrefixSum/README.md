@@ -20,7 +20,7 @@ for (int i = 0; i < nums.length; i++) {
 |题目|难度||
 |---|---|---|
 |[724. 寻找数组的中心下标](https://leetcode-cn.com/problems/find-pivot-index/)|简单|√|
-|[560. 和为K的子数组](https://leetcode-cn.com/problems/subarray-sum-equals-k/)|中等
+|[560. 和为K的子数组](https://leetcode-cn.com/problems/subarray-sum-equals-k/)|中等|√|
 |[1248. 统计「优美子数组」](https://leetcode-cn.com/problems/count-number-of-nice-subarrays/)|中等
 |[974. 和可被 K 整除的子数组](https://leetcode-cn.com/problems/subarray-sums-divisible-by-k/)|中等
 |[523. 连续的子数组和](https://leetcode-cn.com/problems/continuous-subarray-sum/)|中等
