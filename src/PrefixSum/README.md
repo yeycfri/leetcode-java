@@ -23,7 +23,7 @@ for (int i = 0; i < nums.length; i++) {
 |[560. 和为K的子数组](https://leetcode-cn.com/problems/subarray-sum-equals-k/)|中等|√|
 |[930. 和相同的二元子数组](https://leetcode-cn.com/problems/binary-subarrays-with-sum/)|中等|√|
 |[1248. 统计「优美子数组」](https://leetcode-cn.com/problems/count-number-of-nice-subarrays/)|中等|√|
-|[974. 和可被 K 整除的子数组](https://leetcode-cn.com/problems/subarray-sums-divisible-by-k/)|中等
+|[974. 和可被 K 整除的子数组](https://leetcode-cn.com/problems/subarray-sums-divisible-by-k/)|中等|√|
 |[523. 连续的子数组和](https://leetcode-cn.com/problems/continuous-subarray-sum/)|中等
 |[303. 区域和检索 - 数组不可变](https://leetcode-cn.com/problems/range-sum-query-immutable/)|简单
 |[304. 二维区域和检索 - 矩阵不可变](https://leetcode-cn.com/problems/range-sum-query-2d-immutable/)|中等
