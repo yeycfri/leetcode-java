@@ -88,6 +88,7 @@ if (j + 1 < diff.length) {
 
 |题目|难度||
 |---|---|---|
+|[370. 区间加法](https://leetcode-cn.com/problems/range-addition/)|中等|√|
 |[1109. 航班预订统计](https://leetcode-cn.com/problems/corporate-flight-bookings/)|中等|√|
 |[1094. 拼车](https://leetcode-cn.com/problems/car-pooling/)|中等|√|
 |[1854. 人口最多的年份](https://leetcode-cn.com/problems/maximum-population-year/)|简单|√|
