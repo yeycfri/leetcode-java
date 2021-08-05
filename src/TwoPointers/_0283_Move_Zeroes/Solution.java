@@ -2,19 +2,17 @@ package TwoPointers._0283_Move_Zeroes;
 
 public class Solution {
     public void moveZeroes(int[] nums) {
-        int left = 0, right = 0;
-        while (right < nums.length) {
-            if (nums[right] != 0) {
-                swap(nums, left, right);
-                left++;
-            }
-            right++;
+        int l = 0, r = 0, n = nums.length;
+        while (r < n) {
+            if (nums[r] != 0)
+                swap(nums, l++, r);
+            r++;
         }
     }
 
-    public void swap(int[] nums, int left, int right) {
-        int tmp = nums[left];
-        nums[left] = nums[right];
-        nums[right] = tmp;
+    private void swap(int[] nums, int i, int j) {
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
     }
 }
