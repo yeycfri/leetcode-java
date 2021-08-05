@@ -88,7 +88,7 @@ int[] getRandom(Iterator itr, int k) {
 |[382. 链表随机节点](https://leetcode-cn.com/problems/linked-list-random-node/)|中等|√|
 |[398. 随机数索引](https://leetcode-cn.com/problems/random-pick-index/)|中等|√|
 |[497. 非重叠矩形中的随机点](https://leetcode-cn.com/problems/random-point-in-non-overlapping-rectangles/)|中等|√|
-|[519. 随机翻转矩阵](https://leetcode-cn.com/problems/random-flip-matrix/)|中等
+|[519. 随机翻转矩阵](https://leetcode-cn.com/problems/random-flip-matrix/)|中等|√|
 
 ### 2.2 加权随机抽样
 
