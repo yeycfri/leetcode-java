@@ -379,3 +379,14 @@ int bucketId = (arr[i] - min) / interval;
 |[215. 数组中的第K个最大元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)|中等|√|
 |[692. 前K个高频单词](https://leetcode-cn.com/problems/top-k-frequent-words/)|中等|√|
 |[451. 根据字符出现频率排序](https://leetcode-cn.com/problems/sort-characters-by-frequency/)|中等|√|
+
+## TopK 问题
+
+问题描述： 从 arr[1, n] 这 n 个数中，找出最大的 k 个数。
+
+- 全局排序后返回 arr[n-k+1, n]，时间复杂度 O(nlogn)。
+- 局部排序，可采用冒泡选择，排出最大的 k 个数，时间复杂度 O(nk)。
+- 小顶堆，容量为 k，待判定元素若比堆顶大则替代当前堆顶元素，最差时间复杂度 O(nlogk)。
+- 快速选择，利用快速排序思想，把数组分为左右两个区，左区元素都大于右区，根据分区点的位置，选择进入一个分支，时间复杂度 O(n)。
+
+题目：[215. 数组中的第K个最大元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)
