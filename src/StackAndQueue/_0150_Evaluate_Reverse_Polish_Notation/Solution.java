@@ -1,4 +1,4 @@
-package Stack._0150_Evaluate_Reverse_Polish_Notation;
+package StackAndQueue._0150_Evaluate_Reverse_Polish_Notation;
 
 public class Solution {
     public int evalRPN(String[] tokens) {

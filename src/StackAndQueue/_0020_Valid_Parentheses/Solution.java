@@ -1,4 +1,4 @@
-package Stack._0020_Valid_Parentheses;
+package StackAndQueue._0020_Valid_Parentheses;
 
 import java.util.Stack;
 

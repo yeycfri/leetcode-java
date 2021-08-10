@@ -1,4 +1,4 @@
-package Stack._0071_Simplify_Path;
+package StackAndQueue._0071_Simplify_Path;
 
 public class Solution {
     public String simplifyPath(String path) {
