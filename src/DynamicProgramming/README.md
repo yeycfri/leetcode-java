@@ -1,12 +1,12 @@
 # 动态规划
 
-## 动规五部曲
+## 1. 动规五部曲
 
-1. 确定dp数组以及下标的含义
+1. 确定 dp 数组以及下标的含义
 2. 确定递推公式（状态转移公式）
-3. 确定dp数组初始化
+3. 确定 dp 数组初始化
 4. 确定遍历顺序
-5. 举例推导dp数组
+5. 举例推导 dp 数组
 
 ### 题目
 
@@ -19,38 +19,17 @@
 |[63. 不同路径 II](https://leetcode-cn.com/problems/unique-paths-ii/)|中等|√|
 |[343. 整数拆分](https://leetcode-cn.com/problems/integer-break/)|中等|√|
 |[96. 不同的二叉搜索树](https://leetcode-cn.com/problems/unique-binary-search-trees/)|中等|√|
-|[198. 打家劫舍](https://leetcode-cn.com/problems/house-robber/)|中等|√|
-|[213. 打家劫舍 II](https://leetcode-cn.com/problems/house-robber-ii/)|中等|√|
-|[337. 打家劫舍 III](https://leetcode-cn.com/problems/house-robber-iii/)|中等|√|
-|[121. 买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)|简单|√|
-|[122. 买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)|简单|√|
-|[123. 买卖股票的最佳时机 III](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/)|困难|√|
-|[188. 买卖股票的最佳时机 IV](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/)|困难|√|
-|[309. 最佳买卖股票时机含冷冻期](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)|中等|√|
-|[714. 买卖股票的最佳时机含手续费](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)|中等|√|
-|[300. 最长递增子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/)|中等|√|
-|[674. 最长连续递增序列](https://leetcode-cn.com/problems/longest-continuous-increasing-subsequence/)|简单|√|
-|[718. 最长重复子数组](https://leetcode-cn.com/problems/maximum-length-of-repeated-subarray/)|中等|√|
-|[1143. 最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/)|中等|√|
-|[1035. 不相交的线](https://leetcode-cn.com/problems/uncrossed-lines/)|中等|√|
-|[53. 最大子序和](https://leetcode-cn.com/problems/maximum-subarray/)|简单|√|
-|[392. 判断子序列](https://leetcode-cn.com/problems/is-subsequence/)|简单|√|
-|[115. 不同的子序列](https://leetcode-cn.com/problems/distinct-subsequences/)|困难|√|
-|[583. 两个字符串的删除操作](https://leetcode-cn.com/problems/delete-operation-for-two-strings/)|中等|√|
-|[72. 编辑距离](https://leetcode-cn.com/problems/edit-distance/)|困难|√|
-|[647. 回文子串](https://leetcode-cn.com/problems/palindromic-substrings/)|中等|√|
-|[5. 最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/)|中等|√|
-|[516. 最长回文子序列](https://leetcode-cn.com/problems/longest-palindromic-subsequence/)|中等|√|
+|[338. 比特位计数](https://leetcode-cn.com/problems/counting-bits/)|简单|√|
 
-## 背包问题
+## 2. 背包问题
 
 ![](https://camo.githubusercontent.com/5c5af3f54a3503cdb989ab1c28e2933202a33259608c70af0e72db5a858f14e6/68747470733a2f2f696d672d626c6f672e6373646e696d672e636e2f32303231303131373137313330373430372e706e67)
 
-### 01背包
+### 2.1 01背包
 
-物品列表item[0..n]，重量列表weight[0..n]，价值列表value[0..n]，背包重量bagWeight，每个物品只能取一次或不取。
+物品列表 item[0..n]，重量列表 weight[0..n]，价值列表 value[0..n]，背包重量 bagWeight，每个物品只能取一次或不取。
 
-每个物品取或不取，dp[i][j]：从下标为[0..i]的物品里任意取，放进容量为j的背包，价值总和最大是多少。 常见递推公式：
+每个物品取或不取，dp[i][j]：从下标为 [0..i] 的物品里任意取，放进容量为 j 的背包，价值总和最大是多少。 常见递推公式：
 
 - 求价值最大：`dp[i][j] = max(dp[i - 1][j], dp[i - 1][j - weight[i]] + value[i]);`
 - 求排列组合数：`dp[i][j] += dp[i - 1][j - weight[i]];`
@@ -67,7 +46,7 @@ for(int i = 1; i < weight.length; i++) { // 遍历物品
 }
 ```
 
-可简化为一维，dp[i]：容量为i的背包，所背的物品价值可以最大为dp[i]。此时背包重量要倒序遍历：
+可简化为一维，dp[i]：容量为 i 的背包，所背的物品价值可以最大为 dp[i]。此时背包重量要倒序遍历：
 
 ``` java
 // 初始化后
@@ -89,9 +68,9 @@ for(int i = 0; i < weight.length; i++) { // 遍历物品
 |[494. 目标和](https://leetcode-cn.com/problems/target-sum/)|中等|√|
 |[474. 一和零](https://leetcode-cn.com/problems/ones-and-zeroes/)|中等|√|
 
-### 完全背包
+### 2.2 完全背包
 
-物品列表item[0..n]，重量列表weight[0..n]，价值列表value[0..n]，背包重量bagWeight，每个物品能取无限次。
+物品列表 item[0..n]，重量列表 weight[0..n]，价值列表 value[0..n]，背包重量 bagWeight，每个物品能取无限次。
 
 01背包为了保证物品只用一次，背包容量要倒序遍历。完全背包的物品是可以添加多次的，所以背包容量正序遍历，即：
 
@@ -118,13 +97,13 @@ for(int i = 0; i < weight.size(); i++) { // 遍历物品
 |[279. 完全平方数](https://leetcode-cn.com/problems/perfect-squares/)|中等|√|
 |[139. 单词拆分](https://leetcode-cn.com/problems/word-break/)|中等|√|
 
-### 多重背包
+### 2.3 多重背包
 
-物品列表item[0..n]，重量列表weight[0..n]，价值列表value[0..n]，数量列表amount[0..n]，背包重量bagWeight。
+物品列表 item[0..n]，重量列表 weight[0..n]，价值列表 value[0..n]，数量列表 amount[0..n]，背包重量 bagWeight。
 
 解决方法：
 
-- 物品item_i有amount_i件可用，把amount_i件摊开，转化为01背包。
+- 物品 item_i 有 amount_i 件可用，把 amount_i 件摊开，转化为01背包。
 
 ``` java
 for (int i = 0; i < amount.length; i++) {
@@ -148,6 +127,60 @@ for(int i = 0; i < weight.length; i++) { // 遍历物品
     }
 }
 ```
+
+## 3. 打家劫舍
+
+|题目|难度||
+|---|---|---|
+|[198. 打家劫舍](https://leetcode-cn.com/problems/house-robber/)|中等|√|
+|[213. 打家劫舍 II](https://leetcode-cn.com/problems/house-robber-ii/)|中等|√|
+|[337. 打家劫舍 III](https://leetcode-cn.com/problems/house-robber-iii/)|中等|√|
+
+## 4. 股票问题
+
+|题目|难度||
+|---|---|---|
+|[121. 买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)|简单|√|
+|[122. 买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)|简单|√|
+|[123. 买卖股票的最佳时机 III](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/)|困难|√|
+|[188. 买卖股票的最佳时机 IV](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/)|困难|√|
+|[309. 最佳买卖股票时机含冷冻期](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)|中等|√|
+|[714. 买卖股票的最佳时机含手续费](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)|中等|√|
+
+## 5. 子序列问题
+
+### 5.1 连续子序列
+
+|题目|难度||
+|---|---|---|
+|[300. 最长递增子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/)|中等|√|
+|[1143. 最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/)|中等|√|
+|[1035. 不相交的线](https://leetcode-cn.com/problems/uncrossed-lines/)|中等|√|
+
+### 5.2 不连续子序列
+
+|题目|难度||
+|---|---|---|
+|[674. 最长连续递增序列](https://leetcode-cn.com/problems/longest-continuous-increasing-subsequence/)|简单|√|
+|[718. 最长重复子数组](https://leetcode-cn.com/problems/maximum-length-of-repeated-subarray/)|中等|√|
+|[53. 最大子序和](https://leetcode-cn.com/problems/maximum-subarray/)|简单|√|
+
+### 5.3 编辑距离
+
+|题目|难度||
+|---|---|---|
+|[392. 判断子序列](https://leetcode-cn.com/problems/is-subsequence/)|简单|√|
+|[115. 不同的子序列](https://leetcode-cn.com/problems/distinct-subsequences/)|困难|√|
+|[583. 两个字符串的删除操作](https://leetcode-cn.com/problems/delete-operation-for-two-strings/)|中等|√|
+|[72. 编辑距离](https://leetcode-cn.com/problems/edit-distance/)|困难|√|
+
+### 5.4 回文
+
+|题目|难度||
+|---|---|---|
+|[647. 回文子串](https://leetcode-cn.com/problems/palindromic-substrings/)|中等|√|
+|[5. 最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/)|中等|√|
+|[516. 最长回文子序列](https://leetcode-cn.com/problems/longest-palindromic-subsequence/)|中等|√|
 
 ## 参考
 
