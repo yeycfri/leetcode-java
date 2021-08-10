@@ -34,6 +34,8 @@ private ListNode reverse(ListNode prev, ListNode cur) {
 
 ## 2. 找链表中点
 
+- 节点数为偶数情况下，返回第一个中间结点，[1, 2, 3, 4, 5, 6] 返回 3
+
 ``` java
 public ListNode mid(ListNode head) {
     ListNode slow = head, fast = head;
@@ -43,6 +45,19 @@ public ListNode mid(ListNode head) {
     }
     return slow;
 }
+```
+
+- 节点数为偶数情况下，返回第二个中间结点，[1, 2, 3, 4, 5, 6] 返回 4
+
+``` java
+    public ListNode middleNode(ListNode head) {
+        ListNode slow = head, fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+    }
 ```
 
 ## 3. 检测是否有环
@@ -106,6 +121,7 @@ public ListNode findGate(ListNode head) {
 |[面试题 02.07. 链表相交](https://leetcode-cn.com/problems/intersection-of-two-linked-lists-lcci/)|简单|√|
 |[203. 移除链表元素](https://leetcode-cn.com/problems/remove-linked-list-elements/)|简单|√|
 |[206. 反转链表](https://leetcode-cn.com/problems/reverse-linked-list/)|简单|√|
+|[876. 链表的中间结点](https://leetcode-cn.com/problems/middle-of-the-linked-list/)|简单|√|
 |[234. 回文链表](https://leetcode-cn.com/problems/palindrome-linked-list/)|简单|√|
 |[143. 重排链表](https://leetcode-cn.com/problems/reorder-list/)|中等|√|
 |[707. 设计链表](https://leetcode-cn.com/problems/design-linked-list/)|中等|√|
