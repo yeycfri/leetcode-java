@@ -127,6 +127,26 @@ public ListNode swapPairs(ListNode head) {
 }
 ```
 
+## 6. 合并两个升序链表
+
+``` java
+public ListNode merge(ListNode p1, ListNode p2) {
+    ListNode dummy = new ListNode(0), cur = dummy;
+    while (p1 != null && p2 != null) {
+        if (p1.val < p2.val) {
+            cur.next = p1;
+            p1 = p1.next;
+        } else {
+            cur.next = p2;
+            p2 = p2.next;
+        }
+        cur = cur.next;
+    }
+    cur.next = (p1 == null) ? p2 : p1;
+    return dummy.next;
+}
+```
+
 # 题目
 
 |题目|难度||
@@ -147,3 +167,4 @@ public ListNode swapPairs(ListNode head) {
 |[234. 回文链表](https://leetcode-cn.com/problems/palindrome-linked-list/)|简单|√|
 |[143. 重排链表](https://leetcode-cn.com/problems/reorder-list/)|中等|√|
 |[707. 设计链表](https://leetcode-cn.com/problems/design-linked-list/)|中等|√|
+|[23. 合并K个升序链表](https://leetcode-cn.com/problems/merge-k-sorted-lists/)|困难|√|
