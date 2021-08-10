@@ -94,3 +94,4 @@ if (j + 1 < diff.length) {
 |[1854. 人口最多的年份](https://leetcode-cn.com/problems/maximum-population-year/)|简单|√|
 |[面试题 16.10. 生存人数](https://leetcode-cn.com/problems/living-people-lcci/)|中等|√|
 |[1943. 描述绘画结果](https://leetcode-cn.com/problems/describe-the-painting/)|中等|√|
+|[413. 等差数列划分](https://leetcode-cn.com/problems/arithmetic-slices/)|中等|√|
