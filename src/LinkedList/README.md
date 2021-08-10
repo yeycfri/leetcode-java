@@ -116,6 +116,7 @@ public ListNode findGate(ListNode head) {
 |[19. 删除链表的倒数第 N 个结点](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/)|中等|√|
 |[24. 两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs/)|中等|√|
 |[138. 复制带随机指针的链表](https://leetcode-cn.com/problems/copy-list-with-random-pointer/)|中等|√|
+|[141. 环形链表](https://leetcode-cn.com/problems/linked-list-cycle/)|简单|√|
 |[142. 环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii/)|中等|√|
 |[160. 相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/)|简单|√|
 |[面试题 02.07. 链表相交](https://leetcode-cn.com/problems/intersection-of-two-linked-lists-lcci/)|简单|√|
