@@ -142,6 +142,7 @@ public ListNode swapPairs(ListNode head) {
 |[203. 移除链表元素](https://leetcode-cn.com/problems/remove-linked-list-elements/)|简单|√|
 |[206. 反转链表](https://leetcode-cn.com/problems/reverse-linked-list/)|简单|√|
 |[92. 反转链表 II](https://leetcode-cn.com/problems/reverse-linked-list-ii/)|中等|√|
+|[25. K 个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)|困难|√|
 |[876. 链表的中间结点](https://leetcode-cn.com/problems/middle-of-the-linked-list/)|简单|√|
 |[234. 回文链表](https://leetcode-cn.com/problems/palindrome-linked-list/)|简单|√|
 |[143. 重排链表](https://leetcode-cn.com/problems/reorder-list/)|中等|√|
