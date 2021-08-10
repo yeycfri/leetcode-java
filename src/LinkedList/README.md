@@ -108,6 +108,25 @@ public ListNode findGate(ListNode head) {
 
 ## 5. 两两交换链表节点
 
+思路：cur -> node1 -> node2 -> XXX 换为 cur -> node2 -> node1 -> XXX，换完 cur 来到 node1。
+
+``` java
+public ListNode swapPairs(ListNode head) {
+    ListNode dummy = new ListNode(0, head), cur = dummy;
+    
+    // 后面不足两个节点，则不用继续
+    while (cur.next != null && cur.next.next != null) {
+        ListNode node1 = cur.next;
+        ListNode node2 = cur.next.next;
+        node1.next = node2.next;
+        node2.next = node1;
+        cur.next = node2;
+        cur = node1;
+    }
+    return dummy.next;
+}
+```
+
 # 题目
 
 |题目|难度||

@@ -4,16 +4,16 @@ import common.ListNode;
 
 public class Solution {
     public ListNode swapPairs(ListNode head) {
-        ListNode dummy = new ListNode(0, head);
-        ListNode cur = dummy;
-        while (cur.next != null && cur.next.next != null) {
-            ListNode tmp1 = cur.next;
-            ListNode tmp2 = tmp1.next.next;
+        ListNode dummy = new ListNode(0, head), cur = dummy;
 
-            cur.next = cur.next.next;
-            cur.next.next = tmp1;
-            tmp1.next = tmp2;
-            cur = tmp1;
+        // 后面不足两个节点，则不用继续
+        while (cur.next != null && cur.next.next != null) {
+            ListNode node1 = cur.next;
+            ListNode node2 = cur.next.next;
+            node1.next = node2.next;
+            node2.next = node1;
+            cur.next = node2;
+            cur = node1;
         }
         return dummy.next;
     }
