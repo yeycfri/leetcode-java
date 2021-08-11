@@ -104,7 +104,7 @@ void dfs(Graph graph, int s) {
 #### 题目
 |题目|难度||
 |---|---|---|
-|[797. 所有可能的路径](https://leetcode-cn.com/problems/all-paths-from-source-to-target/)|中等
+|[797. 所有可能的路径](https://leetcode-cn.com/problems/all-paths-from-source-to-target/)|中等|√|
 
 ### 广度优先搜索
 
