@@ -145,11 +145,18 @@ BFS 可以用于无权图中求最短路径问题，因为是逐层遍历，只�
 
 ## 拓扑排序
 
+对一个有向无环图 (DAG, Directed Acyclic Graph) G 进行拓扑排序：将 G 中所有顶点排成一个线性序列，使得图中任意一对顶点 u 和 v，若边 E(G) 中有边 <u,v>，则 u 在线性序列中出现在 v 之前。通常，这样的线性序列称为满足拓扑次序 (Topological Order) 的序列，简称拓扑序列。
+
+![img](../../resources/topo-1.png)
+
+![img](../../resources/topo-2.png)
+
+以上图为例，直观来看，拓扑排序就是把一幅图「拉平」，而且这个「拉平」的图里面，所有箭头方向都是一致的，如上图所有箭头都是朝右的。
 
 ### 题目
 |题目|难度||
 |---|---|---|
-|[207. 课程表](https://leetcode-cn.com/problems/course-schedule/)|中等
+|[207. 课程表](https://leetcode-cn.com/problems/course-schedule/)|中等|√|
 |[210. 课程表 II](https://leetcode-cn.com/problems/course-schedule-ii/)|中等
 |[310. 最小高度树](https://leetcode-cn.com/problems/minimum-height-trees/)|中等
 |[329. 矩阵中的最长递增路径](https://leetcode-cn.com/problems/longest-increasing-path-in-a-matrix/)|困难
