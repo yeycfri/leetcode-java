@@ -122,6 +122,7 @@ public int binarySearch(int[] nums, int target) {
 |题目|难度||
 |---|---|---|
 | [704. 二分查找](https://leetcode-cn.com/problems/binary-search/) | 简单 | √ |
+| [74. 搜索二维矩阵](https://leetcode-cn.com/problems/search-a-2d-matrix/) | 中等 | √ |
 | [35. 搜索插入位置](https://leetcode-cn.com/problems/search-insert-position/) | 简单 | √ |
 | [34. 在排序数组中查找元素的第一个和最后一个位置](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | 中等 | √ |
 | [33. 搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/) | 中等 | √ |
