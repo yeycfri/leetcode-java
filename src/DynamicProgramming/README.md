@@ -20,6 +20,7 @@
 |[343. 整数拆分](https://leetcode-cn.com/problems/integer-break/)|中等|√|
 |[96. 不同的二叉搜索树](https://leetcode-cn.com/problems/unique-binary-search-trees/)|中等|√|
 |[338. 比特位计数](https://leetcode-cn.com/problems/counting-bits/)|简单|√|
+|[10. 正则表达式匹配](https://leetcode-cn.com/problems/regular-expression-matching/)|困难|√|
 
 ## 2. 背包问题
 
