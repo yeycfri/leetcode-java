@@ -21,6 +21,7 @@
 |[96. 不同的二叉搜索树](https://leetcode-cn.com/problems/unique-binary-search-trees/)|中等|√|
 |[338. 比特位计数](https://leetcode-cn.com/problems/counting-bits/)|简单|√|
 |[10. 正则表达式匹配](https://leetcode-cn.com/problems/regular-expression-matching/)|困难|√|
+|[32. 最长有效括号](https://leetcode-cn.com/problems/longest-valid-parentheses/)|困难|√|
 
 ## 2. 背包问题
 
