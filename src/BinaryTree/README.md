@@ -96,3 +96,4 @@ public void levelOrder(TreeNode root) {
 |[437. 路径总和 III](https://leetcode-cn.com/problems/path-sum-iii/)|中等|√|
 |[666. 路径总和 IV](https://leetcode-cn.com/problems/path-sum-iv/)|中等|√|
 |[687. 最长同值路径](https://leetcode-cn.com/problems/longest-univalue-path/)|中等|√|
+|[124. 二叉树中的最大路径和](https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/)|困难|√|
