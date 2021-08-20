@@ -108,3 +108,4 @@ boolean isPowerOfTwo(int n) {
 |[136. 只出现一次的数字](https://leetcode-cn.com/problems/single-number/)|简单|√|
 |[191. 位1的个数](https://leetcode-cn.com/problems/number-of-1-bits/)|简单|√|
 |[231. 2 的幂](https://leetcode-cn.com/problems/power-of-two/)|简单|√|
+|[461. 汉明距离](https://leetcode-cn.com/problems/hamming-distance/)|简单|√|
