@@ -153,6 +153,7 @@ public ListNode merge(ListNode p1, ListNode p2) {
 |---|---|---|
 |[2. 两数相加](https://leetcode-cn.com/problems/add-two-numbers/)|中等|√|
 |[19. 删除链表的倒数第 N 个结点](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/)|中等|√|
+|[21. 合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/)|简单|√|
 |[24. 两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs/)|中等|√|
 |[138. 复制带随机指针的链表](https://leetcode-cn.com/problems/copy-list-with-random-pointer/)|中等|√|
 |[141. 环形链表](https://leetcode-cn.com/problems/linked-list-cycle/)|简单|√|
