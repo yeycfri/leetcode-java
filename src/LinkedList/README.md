@@ -157,6 +157,7 @@ public ListNode merge(ListNode p1, ListNode p2) {
 |[138. 复制带随机指针的链表](https://leetcode-cn.com/problems/copy-list-with-random-pointer/)|中等|√|
 |[141. 环形链表](https://leetcode-cn.com/problems/linked-list-cycle/)|简单|√|
 |[142. 环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii/)|中等|√|
+|[287. 寻找重复数](https://leetcode-cn.com/problems/find-the-duplicate-number/)|中等|√|
 |[160. 相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/)|简单|√|
 |[面试题 02.07. 链表相交](https://leetcode-cn.com/problems/intersection-of-two-linked-lists-lcci/)|简单|√|
 |[203. 移除链表元素](https://leetcode-cn.com/problems/remove-linked-list-elements/)|简单|√|
