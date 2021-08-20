@@ -17,6 +17,7 @@
 |[746. 使用最小花费爬楼梯](https://leetcode-cn.com/problems/min-cost-climbing-stairs/)|简单|√|
 |[62. 不同路径](https://leetcode-cn.com/problems/unique-paths/)|中等|√|
 |[63. 不同路径 II](https://leetcode-cn.com/problems/unique-paths-ii/)|中等|√|
+|[64. 最小路径和](https://leetcode-cn.com/problems/minimum-path-sum/)|中等|√|
 |[343. 整数拆分](https://leetcode-cn.com/problems/integer-break/)|中等|√|
 |[96. 不同的二叉搜索树](https://leetcode-cn.com/problems/unique-binary-search-trees/)|中等|√|
 |[338. 比特位计数](https://leetcode-cn.com/problems/counting-bits/)|简单|√|
