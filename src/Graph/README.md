@@ -158,7 +158,7 @@ BFS 可以用于无权图中求最短路径问题，因为是逐层遍历，只�
 |---|---|---|
 |[207. 课程表](https://leetcode-cn.com/problems/course-schedule/)|中等|√|
 |[210. 课程表 II](https://leetcode-cn.com/problems/course-schedule-ii/)|中等|√|
-|[310. 最小高度树](https://leetcode-cn.com/problems/minimum-height-trees/)|中等
+|[310. 最小高度树](https://leetcode-cn.com/problems/minimum-height-trees/)|中等|√|
 |[329. 矩阵中的最长递增路径](https://leetcode-cn.com/problems/longest-increasing-path-in-a-matrix/)|困难
 
 ## 最小生成树
