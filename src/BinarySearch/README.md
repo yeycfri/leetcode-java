@@ -133,6 +133,7 @@ public int binarySearch(int[] nums, int target) {
 | [300. 最长递增子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/) | 中等 | √ |
 | [275. H 指数 II](https://leetcode-cn.com/problems/h-index-ii/) | 中等 | √ |
 | [852. 山脉数组的峰顶索引](https://leetcode-cn.com/problems/peak-index-in-a-mountain-array/) | 简单 | √ |
+|[162. 寻找峰值](https://leetcode-cn.com/problems/find-peak-element/)|中等|√|
 | [1095. 山脉数组中查找目标值](https://leetcode-cn.com/problems/find-in-mountain-array/) | 困难 | √ |
 | [4. 寻找两个正序数组的中位数](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/) | 困难 ||
 | [658. 找到 K 个最接近的元素](https://leetcode-cn.com/problems/find-k-closest-elements/) | 中等 ||
