@@ -146,6 +146,7 @@ public int binarySearch(int[] nums, int target) {
 |---|---|---|
 | [367. 有效的完全平方数](https://leetcode-cn.com/problems/valid-perfect-square/) | 简单 | √ |
 | [69. x 的平方根](https://leetcode-cn.com/problems/sqrtx/) | 简单 | √ |
+|[875. 爱吃香蕉的珂珂](https://leetcode-cn.com/problems/koko-eating-bananas/)|中等|√|
 | [287. 寻找重复数](https://leetcode-cn.com/problems/find-the-duplicate-number/) | 中等 ||
 | [374. 猜数字大小](https://leetcode-cn.com/problems/guess-number-higher-or-lower/) | 简单 ||
 | [1300. 转变数组后最接近目标值的数组和](https://leetcode-cn.com/problems/sum-of-mutated-array-closest-to-target/) | 中等 ||
