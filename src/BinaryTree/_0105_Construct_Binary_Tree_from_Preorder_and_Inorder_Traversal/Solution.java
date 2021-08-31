@@ -6,24 +6,26 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Solution {
-    Map<Integer, Integer> map = new HashMap<>();
+    Map<Integer, Integer> map;
 
     public TreeNode buildTree(int[] preorder, int[] inorder) {
-        for (int i = 0; i < inorder.length; i++) {
+        map = new HashMap<>();
+        int n = inorder.length;
+        for (int i = 0; i < n; i++) {
             map.put(inorder[i], i);
         }
-        return build(preorder, 0, preorder.length, 0, inorder.length);
+        return build(preorder, 0, n - 1, inorder, 0, n - 1);
     }
 
-    private TreeNode build(int[] preorder, int pstart, int pend, int istart, int iend) {
-        if (iend <= istart) return null;
+    private TreeNode build(int[] preorder, int pstart, int pend, int[] inorder, int istart, int iend) {
+        if (istart > iend) return null;
 
         int rootVal = preorder[pstart];
         TreeNode root = new TreeNode(rootVal);
-        int i = map.get(rootVal);
 
-        root.left = build(preorder, pstart + 1, pstart + 1 + i - istart, istart, i);
-        root.right = build(preorder, pstart + 1 + i - istart, pend, i + 1, iend);
+        int i = map.get(rootVal), leftLen = i - istart;
+        root.left = build(preorder, pstart + 1, pstart + leftLen, inorder, istart, i - 1);
+        root.right = build(preorder, pstart + leftLen + 1, pend, inorder, i + 1, iend);
         return root;
     }
 }
