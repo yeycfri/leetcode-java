@@ -8,6 +8,7 @@
 |[150. 逆波兰表达式求值](https://leetcode-cn.com/problems/evaluate-reverse-polish-notation/)|中等|√|
 |[394. 字符串解码](https://leetcode-cn.com/problems/decode-string/)|中等|√|
 |[32. 最长有效括号](https://leetcode-cn.com/problems/longest-valid-parentheses/)|困难|√|
+|[224. 基本计算器](https://leetcode-cn.com/problems/basic-calculator/)|困难|√|
 
 # 单调栈
 
